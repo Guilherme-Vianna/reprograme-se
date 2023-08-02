@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+body, a { 
+  color : gray
+}
+
+h1{
+  font-size: 5vw;
+  text-align: center;
+  font-family:  "Borel";
+  font-style: italic;
+  font-weight: lighter;
+  /* font-variant: small-caps; */
+
+  font: normal small-caps normal 30px/60px "Borel"
+}
+
+a:link { 
+  color: black;
+  text-decoration: none;
+
+}
+
+a:visited { 
+  color: blue;
+}
+
+i:hover { 
+  color: red; 
+  border: solid 1px black;
+}
+
+p { 
+  text-align: left;
+  text-decoration: underline wavy;
+  text-transform: capitalize;
+  text-indent: 3rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  word-spacing: 10px;
+  white-space: normal;
+}
