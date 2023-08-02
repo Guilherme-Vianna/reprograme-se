@@ -1,0 +1,57 @@
+h1{ 
+  color : blue ; 
+}
+
+i{ 
+  color : red; 
+}
+
+ul { 
+  background: blue;
+}
+
+p { 
+  color: orange;
+}
+
+.vermelho { 
+  color: red;
+}
+
+#teste{ 
+  font-size: 50px;
+}
+
+/* Agrupamento */
+#teste, a, h1 { 
+  font-size: 50px;
+}
+
+* { 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Agrupamento de descendencia*/
+
+h1 i { 
+  color: yellow
+}
+
+/* Agrupamento de descendencia relacao pai x filho*/
+
+h1 > i { 
+  color: green
+}
+
+h1 > i { 
+  color: green
+}
+/* vizinhanca*/
+
+ul ~ p { 
+  text-decoration: underline;
+}
+
+ul + p { 
+  text-decoration: none;
+}
