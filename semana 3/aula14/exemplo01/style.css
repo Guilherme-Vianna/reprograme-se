@@ -1,0 +1,53 @@
+p:after { 
+  content: " *;"
+}
+
+#p:after { 
+  content: " *;"
+}
+
+h1{ 
+  position: relative;
+  text-align: center;
+}
+
+h1:after { 
+  content: "";
+  background-image: linear-gradient(120deg, yellow, blue);
+  width: 90%;
+  height: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) skew(-50deg);
+}
+
+#p3::first-letter {
+  font-size: 200%;
+  color: gray;  
+}
+
+#p2::first-line { 
+  background-color: yellow;
+  font-variant: small-caps;
+}
+
+ul>li::marker { 
+  content: "☕";
+  font-size: 90%;
+}
+
+ol>li::marker { 
+  color: blue
+
+}
+
+a[href^="http"]{
+  display: block;
+  font-weight: bold;
+}
+
+a[href$="reprograme-se"]::after{
+  font-weight:lighter;
+  content: "(.repositorio)";
+}

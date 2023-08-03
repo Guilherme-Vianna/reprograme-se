@@ -1,0 +1,47 @@
+p:after { 
+  content: " *;"
+}
+
+#p:after { 
+  content: " *;"
+}
+
+h1{ 
+  position: relative;
+  text-align: center;
+}
+
+h1:after { 
+  content: "";
+  background-image: linear-gradient(120deg, yellow, blue);
+  width: 90%;
+  height: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) skew(-50deg);
+}
+
+td { 
+  border: solid 1px gray;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  display: inline-block;
+}
+
+/* table tr:nth-child(1) { 
+  background-color: yellow;
+}
+table tr:nth-last-child(1) { 
+  background-color: blue;
+}
+table tr:nth-of-type(3) { 
+  background-color: red;
+} */
+
+table tr:nth-child(odd) { 
+  background-color: gainsboro;
+}
