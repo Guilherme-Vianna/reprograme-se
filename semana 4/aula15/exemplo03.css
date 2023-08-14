@@ -1,0 +1,11 @@
+* {
+  border: solid 1px black;
+}
+
+div {
+  display: inline;
+}
+
+span:first-of-type {
+  display: block;
+}
