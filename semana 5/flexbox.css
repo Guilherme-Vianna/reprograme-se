@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div {
+  height: 120px;
+  width: 25%;
+  border: dotted 2px black;
+  font-size: 60px;
+  text-align: center;
+  line-height: 120px;
+}
