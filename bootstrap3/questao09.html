@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Questão 09</title>
+</head>
+
+<body>
+  <div class="container my-3">
+    <p><a href="index.html">Voltar ao Índice</a></p>
+    <h1 class="display-2">Questão 09</h1>
+    <p class="lead">Usando somente estilos baseados em classes do Bootstrap 5, aprimore o formulário da questão 7
+      adicionando complementos com ícones sugestivos a todos os campos e substituindo os títulos (labels) por
+      placeholders. Defina tamanho grande para todos os campos e botões e ajuste a responsividade do formulário para
+      nenhum campo ficar mal acomodado.</p>
+    <hr>
+  </div>
+  <!-- Valor: 1.5 pontos -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 col-xl-6">
+        <form>
+          <h2 class="mb-4">Cadastro de Cliente</h2>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+            <input type="text" class="form-control form-control-lg" id="nomeCompleto" placeholder="Nome Completo"
+              required>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+            <input type="text" class="form-control form-control-lg" id="cpf" placeholder="CPF" required>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-12 col-lg-6">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                <input type="date" class="form-control form-control-lg" id="dataNascimento" required>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                <select class="form-select form-select-lg" id="genero" required>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+            <textarea class="form-control form-control-lg" id="endereco" rows="4" placeholder="Endereço Completo"
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

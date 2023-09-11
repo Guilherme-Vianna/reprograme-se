@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Questão 10</title>
+</head>
+
+<body>
+  <div class="container my-3">
+    <p><a href="index.html">Voltar ao Índice</a></p>
+    <h1 class="display-2">Questão 10</h1>
+    <p class="lead">Usando somente estilos baseados em classes do Bootstrap 5, aprimore o formulário da questão 7
+      adiconando as seguintes situações de validação de campos:</p>
+    <ul class="lead">
+      <li>O campo Nome Completo deve estar marcado como válido;</li>
+      <li>O campo CPF deve estar marcado como inválido e com a mensagem de validação "Campo obrigatório";</li>
+      <li>O campo Data de Nascimento deve estar marcado como válido;</li>
+      <li>O campo Gênero deve estar marcado como inválido e com a mensagem de validação "Campo obrigatório";</li>
+      <li>O campo Endereço deve estar marcado como válido.</li>
+    </ul>
+    <p class="lead">*Os campos válidos devem ter valores fictícios preenchidos nos campos.</p>
+    <hr>
+  </div>
+  <!-- Valor: 1.5 pontos -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 col-xl-6">
+        <form>
+          <h2 class="mb-4">Cadastro de Cliente</h2>
+
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg is-valid" id="nomeCompleto"
+              placeholder="Nome Completo" value="Fulano de Tal" required>
+            <div class="valid-feedback">
+              Campo válido.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg is-invalid" id="cpf" placeholder="CPF" required>
+            <div class="invalid-feedback">
+              Campo obrigatório.
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-12 col-lg-6">
+              <div class="form-group">
+                <input type="date" class="form-control form-control-lg is-valid" id="dataNascimento" value="1990-01-01"
+                  required>
+                <div class="valid-feedback">
+                  Campo válido.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-group">
+                <select class="form-select form-select-lg is-invalid" id="genero" required>
+                  <option value="">Selecione</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <div class="invalid-feedback">
+                  Campo obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control form-control-lg is-valid" id="endereco" rows="4"
+              placeholder="Endereço Completo" required>123 Rua Fictícia</textarea>
+            <div class="valid-feedback">
+              Campo válido.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
