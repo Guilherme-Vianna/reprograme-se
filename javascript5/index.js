@@ -26,14 +26,14 @@ do {
       celular: celular,
       estado: estado
     }
-    // Chamar a função inserir
+    inserir_cliente(cliente)
   } else if (opcao == 2) {
     console.log("\n\nExcluindo Cliente...\n");
     let codigo = prompt("Digite o código do cliente: ");
-    // Chamar a função excluir
+    excluir_cliente(codigo)
   } else if (opcao == 3) {
     console.log("\n\nListando Clientes...\n");
-    // Chamar a função listar
+    listar_clientes()
   } else {
     console.log("\n\nSaindo do programa...\n");
   }
@@ -44,15 +44,30 @@ do {
 
 
 function inserir_cliente(cliente) {
-  // Implementar corpo da função
+  array_clientes.push(cliente)
 }
 
 function excluir_cliente(codigo) {
-  // Implementar corpo da função
+  for (i = 0; i <= array_clientes.length; i++) {
+    c = array_clientes[i]
+    try {
+      if (codigo == c.codigo) {
+        array_clientes.splice(i, 1)
+      }
+    } catch { //CASO O CODIGO LEIA ALGUMA POSICAO QUE ESTEJA VAZIA
+      console.log("")
+    }
+  }
 }
 
 function listar_clientes() {
-  // Implementar corpo da função
+  array_clientes.forEach((cliente) => {
+    console.log("\nNome: " + cliente.nome)
+    console.log("\nCodigo: " + cliente.codigo)
+    console.log("\nEmail: " + cliente.email)
+    console.log("\nCelular: " + cliente.celular)
+    console.log("\nEstado: " + cliente.estado)
+  })
 }
 
 
