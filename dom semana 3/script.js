@@ -1,11 +1,11 @@
-(function() {
+(function () {
   'use strict'
 
   var forms = document.querySelectorAll('.needs-validation')
 
   Array.prototype.slice.call(forms)
-    .forEach(function(form) {
-      form.addEventListener('submit', function(event) {
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
         if (!form.checkValidity()) {
           form.classList.add('was-validated')
         } else {
@@ -39,14 +39,16 @@ function atualizarTabela() { // Adaptação da função atualizarTabela (5 ponto
   limparTabela();
   const bd_pendrives = getLocalStorage();
   let index = 0;
-  for (cliente of bd_pendrives) {
+  for (pendrive of bd_pendrives) {
     const novaLinha = document.createElement('tr');
     novaLinha.innerHTML = `
         <th scope="row">${index}</th>
-        <td>${cliente.nome}</td>
-        <td>${cliente.email}</td>
-        <td>${cliente.celular}</td>
-        <td>${cliente.estado}</td>
+        <td>${pendrive.armazenamento}</td>
+        <td>${pendrive.quantidade}</td>
+        <td>${pendrive.modelo}</td>
+        <td>${pendrive.valor}</td>
+        <td>${pendrive.marca}</td>
+        <td>${pendrive.formato}</td>
         <td>
             <button type="button" class="btn btn-danger" id="${index}" onclick="excluir(${index})">Excluir</button>
         </td>
@@ -77,23 +79,20 @@ function excluir(index) { // Adaptação da função excluir (5 pontos)
   atualizarTabela();
 }
 
-function validarCelular() { // Adaptação da função validar (10 pontos)
-  const bd_pendrives = getLocalStorage();
-  for (cliente of bd_pendrives) {
-    if (celular.value == cliente.celular) {
-      celular.setCustomValidity("Este número de celular já existe!");
-      feedbackCelular.innerText = "Este número de celular já existe!";
-      return false;
-    } else {
-      celular.setCustomValidity("");
-      feedbackCelular.innerText = "Informe o celular corretamente.";
-    }
+function validarQuantidade() { // Adaptação da função validar (10 pontos)
+  if (quantidade.value > 20) {
+    console.log("Maior que 20")
+    quantidade.setCustomValidity("A quantidade nao pode ser maior que 20");
+    feedbackQuantidade.innerText = "A quantidade nao pode ser maior que 20";
+  } else {
+    quantidade.setCustomValidity("");
+    feedbackQuantidade.innerText = "Informe a quantidade corretamente";
   }
   return true;
 }
 
 atualizarTabela();
 // Seleção dos elementos e adição do listener para validação customizada (5 pontos)
-const celular = document.getElementById("celular");
-const feedbackCelular = document.getElementById("feedbackCelular");
-celular.addEventListener('input', validarCelular);
+const quantidade = document.getElementById("quantidade");
+const feedbackQuantidade = document.getElementById("feedbackQuantidade");
+quantidade.addEventListener('input', validarQuantidade);
